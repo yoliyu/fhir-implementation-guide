@@ -1,0 +1,119 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "EWSQuestionnaireResponse",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
+    ],
+    "tag": [
+      {
+        "code": "lformsVersion: 34.0.2"
+      }
+    ]
+  },
+  "status": "completed",
+  "authored": "2023-11-08T17:58:26.704Z",
+  "item": [
+    {
+      "linkId": "8232200932098",
+      "text": "Respiratory Rate",
+      "answer": [
+        {
+          "valueQuantity": {
+            "value": 20,
+            "code": "/min",
+            "system": "http://unitsofmeasure.org",
+            "unit": "per minute"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "8051258817821",
+      "text": "Pulse Rate",
+      "answer": [
+        {
+          "valueQuantity": {
+            "value": 60,
+            "code": "/min",
+            "system": "http://unitsofmeasure.org",
+            "unit": "per minute"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "7266048740543",
+      "text": "Oxygen Saturation",
+      "answer": [
+        {
+          "valueQuantity": {
+            "value": 95,
+            "code": "%",
+            "system": "http://unitsofmeasure.org"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "4033232822901",
+      "text": "Blood Presure",
+      "item": [
+        {
+          "linkId": "5954955657844",
+          "text": "Systolic Blood Pressure",
+          "answer": [
+            {
+              "valueQuantity": {
+                "value": 120,
+                "code": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "unit": "millimeter of mercury"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "5714235832052",
+          "text": "Diastolic Blood Pressure",
+          "answer": [
+            {
+              "valueQuantity": {
+                "value": 86,
+                "code": "mmHg",
+                "unit": "mmHg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "8428104633621",
+      "text": "Temperature",
+      "answer": [
+        {
+          "valueQuantity": {
+            "value": 37,
+            "code": "Cel",
+            "system": "http://unitsofmeasure.org",
+            "unit": "degree Celsius"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "1847242159303",
+      "text": "Alert Voice Pain Unresponsive Scale",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "248234008",
+            "system": "http://snomed.info/sct",
+            "display": "Mentally alert"
+          }
+        }
+      ]
+    }
+  ]
+}

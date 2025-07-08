@@ -1,0 +1,7 @@
+:root {
+    --ig-status-text-color: #034C8C; /* 1. IG Title and status text color */
+    --navbar-bg-color: #034C8C; /* 2. Header container color */
+    --footer-container-bg-color: #034C8C; /* 3. Footer background color*/
+    --btn-hover-color: #034c8c81;  /* 6. Menu button hover color */
+    --btn-active-color: #034c8c81; /* 7. Menu button active color */ 
+}

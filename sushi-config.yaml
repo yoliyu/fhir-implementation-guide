@@ -1,0 +1,33 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: compania1
+canonical: 'http://compañia1.es/implementation-guide'
+name: compania1IG
+title: Compañía 1 implementation guide
+description: This web portal describes the FHIR Implementation Guide for Compañía 1.
+# ###########################################################################
+version: 0.0.1-SNAPSHOT
+status: draft
+# ###########################################################################
+#contact:
+#  - name: Bill Cod
+#    telecom:
+#      - system: email
+#        value: cod@reef.gov
+license: Apache-2.0
+fhirVersion: 4.0.1
+parameters:
+#  apply-publisher: true
+#  apply-contact: true
+  show-inherited-invariants: false
+copyrightYear: 2021+
+releaseLabel: ci-build
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# Configure the menu to be displayed in Japanese.
+menu:
+  Artifacts Summary: artifacts.html
+

@@ -1,0 +1,4 @@
+[EWSQuestionnaire]: Questionnaire-EWSQuestionnaire.html
+[EWSQuestionnaireResponse]: QuestionnaireResponse-EWSQuestionnaireResponse.html
+[HealthonautsPatient]: StructureDefinition-HealthonautsPatient.html
+[HealthonautsPulseRateObservation]: StructureDefinition-HealthonautsPulseRateObservation.html

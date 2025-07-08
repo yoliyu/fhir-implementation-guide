@@ -1,0 +1,380 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "EWSQuestionnaire",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "respiratoryrate",
+        "language": "text/fhirpath",
+        "expression": "%resource.item.where(linkId='8232200932098').answer.valueQuantity.value"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "heartrate",
+        "language": "text/fhirpath",
+        "expression": "%resource.item.where(linkId='8051258817821').answer.valueQuantity.value"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "spo2",
+        "language": "text/fhirpath",
+        "expression": "%resource.item.where(linkId='7266048740543').answer.valueQuantity.value"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "systolicbloodpressure",
+        "language": "text/fhirpath",
+        "expression": "%resource.item.where(linkId='4033232822901').item.where(linkId='5954955657844').answer.valueQuantity.value"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "temperature",
+        "language": "text/fhirpath",
+        "expression": "%resource.item.where(linkId='8428104633621').answer.valueQuantity.value"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/variable",
+      "valueExpression": {
+        "name": "avpu",
+        "language": "text/fhirpath",
+        "expression": "%resource.item.where(linkId='1847242159303').answer.valueCoding.code"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observation-extract-category",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "vital-sign",
+            "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+            "display": "vital-sign"
+          }
+        ]
+      }
+    }
+  ],
+  "name": "Early Warning Score",
+  "title": "Early Warning Score",
+  "status": "active",
+  "code": [
+    {
+      "code": "445193007",
+      "system": "http://snomed.info/sct",
+      "display": "Early warning scoring system (assessment scale)"
+    }
+  ],
+  "item": [
+    {
+      "type": "quantity",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+          "valueCoding": {
+            "code": "/min",
+            "system": "http://unitsofmeasure.org",
+            "display": "per minute"
+          }
+        },
+        {
+          "valueBoolean": true,
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+        }
+      ],
+      "linkId": "8232200932098",
+      "code": [
+        {
+          "code": "9279-1",
+          "system": "http://loinc.org",
+          "display": "Respiratory Rate"
+        },
+        {
+          "code": "86290005",
+          "system": "http://snomed.info/sct",
+          "display": "Respiratory rate"
+        }
+      ],
+      "text": "Respiratory Rate",
+      "required": true,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "type": "quantity",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+          "valueCoding": {
+            "code": "/min",
+            "system": "http://unitsofmeasure.org",
+            "display": "per minute"
+          }
+        },
+        {
+          "valueBoolean": true,
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+        }
+      ],
+      "linkId": "8051258817821",
+      "code": [
+        {
+          "code": "8867-4",
+          "system": "http://loinc.org",
+          "display": "Heart rate"
+        },
+        {
+          "code": "364075005",
+          "system": "http://snomed.info/sct",
+          "display": "Heart rate"
+        }
+      ],
+      "text": "Pulse Rate",
+      "required": true,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "type": "quantity",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+          "valueCoding": {
+            "code": "%",
+            "system": "http://unitsofmeasure.org"
+          }
+        },
+        {
+          "valueBoolean": true,
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+        }
+      ],
+      "linkId": "7266048740543",
+      "code": [
+        {
+          "code": "59408-5",
+          "system": "http://loinc.org",
+          "display": "Oxygen saturation in Arterial blood by Pulse oximetry"
+        },
+        {
+          "code": "431314004",
+          "system": "http://snomed.info/sct",
+          "display": "Peripheral oxygen saturation"
+        }
+      ],
+      "text": "Oxygen Saturation",
+      "required": true,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "item": [
+        {
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "code": "mm[Hg]",
+                "system": "http://unitsofmeasure.org",
+                "display": "millimeter of mercury"
+              }
+            },
+            {
+              "valueBoolean": true,
+              "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+            }
+          ],
+          "linkId": "5954955657844",
+          "code": [
+            {
+              "code": "8480-6",
+              "system": "http://loinc.org",
+              "display": "Systolic blood pressure"
+            },
+            {
+              "code": "72313002",
+              "system": "http://snomed.info/sct",
+              "display": "Systolic blood pressure"
+            }
+          ],
+          "text": "Systolic Blood Pressure",
+          "required": true,
+          "repeats": false,
+          "readOnly": false
+        },
+        {
+          "type": "quantity",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+              "valueCoding": {
+                "code": "mmHg",
+                "display": "mmHg"
+              }
+            }
+          ],
+          "linkId": "5714235832052",
+          "code": [
+            {
+              "code": "8462-4",
+              "system": "http://loinc.org",
+              "display": "Diastolic blood pressure"
+            },
+            {
+              "code": "1091811000000102",
+              "system": "http://snomed.info/sct",
+              "display": "Diastolic arterial pressure"
+            }
+          ],
+          "text": "Diastolic Blood Pressure",
+          "required": true,
+          "repeats": false,
+          "readOnly": false
+        }
+      ],
+      "type": "group",
+      "extension": [
+        {
+          "valueBoolean": true,
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+        }
+      ],
+      "linkId": "4033232822901",
+      "code": [
+        {
+          "code": "85354-9",
+          "system": "http://loinc.org",
+          "display": "Blood pressure panel with all children optional"
+        },
+        {
+          "code": "75367002",
+          "system": "http://snomed.info/sct",
+          "display": "Blood pressure"
+        }
+      ],
+      "text": "Blood Presure",
+      "required": true,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "type": "quantity",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
+          "valueCoding": {
+            "code": "Cel",
+            "system": "http://unitsofmeasure.org",
+            "display": "degree Celsius"
+          }
+        },
+        {
+          "valueBoolean": true,
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+        }
+      ],
+      "linkId": "8428104633621",
+      "code": [
+        {
+          "code": "8310-5",
+          "system": "http://loinc.org",
+          "display": "Body temperature"
+        },
+        {
+          "code": "276885007",
+          "system": "http://snomed.info/sct",
+          "display": "Core body temperature"
+        }
+      ],
+      "text": "Temperature",
+      "required": true,
+      "repeats": false,
+      "readOnly": false
+    },
+    {
+      "type": "choice",
+      "linkId": "1847242159303",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression",
+          "valueExpression": {
+            "description": "BMI Calculation",
+            "language": "text/fhirpath",
+            "expression": "(iif(%respiratoryrate>35,3,iif(%respiratoryrate<=35 and %respiratoryrate>31,2,iif(%respiratoryrate<=30 and %respiratoryrate>21,1,iif(%respiratoryrate<=20 and %respiratoryrate>=9,1,iif(%respiratoryrate<9,3))))))+(iif(%spo2>92,0,iif(%spo2<=92 and %spo2>90,1,iif(%spo2<=89 and %spo2>85,2,iif(%spo2<85,3)))))+(iif(%temperature>38.9,2,iif(%temperature<=38.9 and %temperature>=38,1,iif(%temperature<=37.9 and %temperature>=36,0,iif(%temperature<=35.9 and %temperature>=35,1,iif(%temperature<=34.9 and %temperature>=34,2,iif(%temperature<34,3)))))))+(iif(%systolicbloodpressure>199,2,iif(%systolicbloodpressure<=199 and %systolicbloodpressure>=100,0,%systolicbloodpressure<=99 and %systolicbloodpressure>=80,1,iif(%systolicbloodpressure<=79 and %systolicbloodpressure>=70,2,iif(%systolicbloodpressure<70,3))))))+(iif(%heartrate>129,3,iif(%heartrate<=129 and %heartrate>=110,2,iif(%heartrate<=109 and %heartrate>=100,1,iif(%heartrate<=99 and %heartrate>=50,0,iif(%heartrate<=49 and %heartrate>=40,1,iif(%heartrate<=39 and %heartrate>=30,2,iif(%heartrate<30,3))))))))+(iif(%avpu,0,iif(%avpu,1,iif(%avpu,2,iif(%avpu,3)))))"
+          }
+        }
+      ],
+      "code": [
+        {
+          "code": "449159002",
+          "system": "http://snomed.info/sct",
+          "display": "Alert voice pain unresponsive scale"
+        }
+      ],
+      "text": "Alert Voice Pain Unresponsive Scale",
+      "required": true,
+      "repeats": false,
+      "readOnly": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "248234008",
+            "system": "http://snomed.info/sct",
+            "display": "Mentally alert"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "450847001",
+            "system": "http://snomed.info/sct",
+            "display": "Responds to pain"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "300202002",
+            "system": "http://snomed.info/sct",
+            "display": "Responds to voice"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "422768004",
+            "system": "http://snomed.info/sct",
+            "display": "Unresponsive"
+          }
+        }
+      ]
+    },
+    {
+      "type": "integer",
+      "extension": [
+        {
+          "valueBoolean": true,
+          "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+        }
+      ],
+      "linkId": "7366215096122",
+      "code": [
+        {
+          "code": "445193007",
+          "system": "http://snomed.info/sct",
+          "display": "Early warning scoring system (assessment scale)"
+        }
+      ],
+      "text": "Total Score",
+      "required": true,
+      "repeats": false,
+      "readOnly": true
+    }
+  ]
+}

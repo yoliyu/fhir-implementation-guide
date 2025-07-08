@@ -1,0 +1,69 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "compania1",
+  "url": "http://compañia1.es/implementation-guide/ImplementationGuide/compania1",
+  "version": "0.0.1-SNAPSHOT",
+  "name": "compania1IG",
+  "title": "Compañía 1 implementation guide",
+  "status": "draft",
+  "description": "This web portal describes the FHIR Implementation Guide for Compañía 1.",
+  "packageId": "compania1",
+  "license": "Apache-2.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "Questionnaire/EWSQuestionnaire"
+        },
+        "name": "Early Warning Score",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "QuestionnaireResponse/EWSQuestionnaireResponse"
+        },
+        "name": "EWSQuestionnaireResponse",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/HealthonautsPatient"
+        },
+        "name": "HealthonautsPatient",
+        "description": "Patient",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/HealthonautsPulseRateObservation"
+        },
+        "name": "HealthonautsPulseRateObservation",
+        "description": "Pulse Rate",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": []
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2021+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      }
+    ]
+  }
+}
